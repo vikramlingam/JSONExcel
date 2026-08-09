@@ -1,4 +1,4 @@
-name: Build release artifacts
+name: Build and publish release
 
 on:
   workflow_dispatch:
@@ -9,15 +9,40 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v7
+
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - run: python -m pip install build twine
-      - run: python -m build
-      - run: twine check dist/*
+
+      - name: Install build tools
+        run: python -m pip install build twine
+
+      - name: Build package
+        run: python -m build
+
+      - name: Check package
+        run: twine check dist/*
+
       - uses: actions/upload-artifact@v4
         with:
           name: jsonexcel-dist
           path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: jsonexcel-dist
+          path: dist/
+
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
