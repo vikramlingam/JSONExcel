@@ -19,4 +19,4 @@ from .roundtrip import from_excel
 from .validation import inspect, validate
 
 __all__ = ["ConfigurationError", "ConversionError", "ExcelLimitError", "InvalidInputError", "JsonExcelError", "LongTextError", "analyze", "compare", "convert", "convert_folder", "dashboard", "diagnose_limits", "from_excel", "inspect", "inspect_json_column", "pivot", "profile", "schema", "summarize", "to_bytes", "to_excel", "validate"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"

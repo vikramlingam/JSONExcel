@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jsonexcel"
-version = "0.1.0"
+version = "0.1.1"
 description = "Convert JSON, JSONL, and Excel JSON columns into clean XLSX workbooks."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -28,6 +28,13 @@ pandas = ["pandas>=2.0"]
 polars = ["polars>=0.20"]
 dev = ["ruff==0.16.2", "build>=1", "mypy>=1.11", "twine>=5"]
 docs = ["mkdocs>=1.6", "mkdocs-material>=9.5"]
+
+[project.urls]
+Homepage = "https://github.com/vikramlingam/JSONExcel"
+Repository = "https://github.com/vikramlingam/JSONExcel"
+Issues = "https://github.com/vikramlingam/JSONExcel/issues"
+Changelog = "https://github.com/vikramlingam/JSONExcel/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/vikramlingam/JSONExcel#readme"
 
 [project.scripts]
 jsonexcel = "jsonexcel.cli:main"

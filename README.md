@@ -109,7 +109,7 @@ convert(
 )
 ```
 
-See [docs/excel-json-column.md](docs/excel-json-column.md).
+See [docs/excel-json-column.md](https://github.com/vikramlingam/JSONExcel/blob/main/docs/excel-json-column.md).
 
 ## JSONL and multiple files
 
@@ -217,7 +217,7 @@ xlsx_bytes = to_bytes(data)
 
 ## Examples
 
-The [examples directory](examples/) contains short scripts with one main library call each.
+The [examples directory](https://github.com/vikramlingam/JSONExcel/tree/main/examples) contains short scripts with one main library call each.
 The included Excel files provide ready-to-use input data.
 
 When working from a cloned repository, install the local package first so every example can
@@ -229,21 +229,21 @@ python -m pip install -e .
 
 | Example | Purpose |
 |---|---|
-| [`simple.py`](examples/simple.py) | Convert Python records to Excel. |
-| [`analytics.py`](examples/analytics.py) | Create column statistics and grouped analytics. |
-| [`summarize.py`](examples/summarize.py) | Aggregate selected values by category. |
-| [`pivot.py`](examples/pivot.py) | Create a cross-tabulation workbook. |
-| [`compare.py`](examples/compare.py) | Compare two datasets by a record key. |
-| [`dashboard.py`](examples/dashboard.py) | Create KPI cells and a native Excel chart. |
-| [`profile.py`](examples/profile.py) | Create a data-quality profile. |
-| [`expand_json_blob_column.py`](examples/expand_json_blob_column.py) | Discover JSON keys in an Excel column and expand them automatically. |
-| [`excel_json_column.py`](examples/excel_json_column.py) | Expand JSON cells and retain selected source columns. |
-| [`excel_analytics.py`](examples/excel_analytics.py) | Read Excel and create grouped analytics. |
-| [`excel_summary.py`](examples/excel_summary.py) | Read Excel and summarize values by region. |
-| [`excel_pivot.py`](examples/excel_pivot.py) | Read Excel and create a region-by-product pivot. |
-| [`excel_dashboard.py`](examples/excel_dashboard.py) | Read Excel and create a dashboard. |
-| [`excel_compare.py`](examples/excel_compare.py) | Compare two Excel workbooks. |
-| [`excel_profile.py`](examples/excel_profile.py) | Read Excel and create a data profile. |
+| [`simple.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/simple.py) | Convert Python records to Excel. |
+| [`analytics.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/analytics.py) | Create column statistics and grouped analytics. |
+| [`summarize.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/summarize.py) | Aggregate selected values by category. |
+| [`pivot.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/pivot.py) | Create a cross-tabulation workbook. |
+| [`compare.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/compare.py) | Compare two datasets by a record key. |
+| [`dashboard.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/dashboard.py) | Create KPI cells and a native Excel chart. |
+| [`profile.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/profile.py) | Create a data-quality profile. |
+| [`expand_json_blob_column.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/expand_json_blob_column.py) | Discover JSON keys in an Excel column and expand them automatically. |
+| [`excel_json_column.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/excel_json_column.py) | Expand JSON cells and retain selected source columns. |
+| [`excel_analytics.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/excel_analytics.py) | Read Excel and create grouped analytics. |
+| [`excel_summary.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/excel_summary.py) | Read Excel and summarize values by region. |
+| [`excel_pivot.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/excel_pivot.py) | Read Excel and create a region-by-product pivot. |
+| [`excel_dashboard.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/excel_dashboard.py) | Read Excel and create a dashboard. |
+| [`excel_compare.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/excel_compare.py) | Compare two Excel workbooks. |
+| [`excel_profile.py`](https://github.com/vikramlingam/JSONExcel/blob/main/examples/excel_profile.py) | Read Excel and create a data profile. |
 
 Run any example from the repository root, such as:
 
@@ -252,7 +252,7 @@ python examples/expand_json_blob_column.py
 python examples/excel_dashboard.py
 ```
 
-See [examples/README.md](examples/README.md) for the complete example guide.
+See [examples/README.md](https://github.com/vikramlingam/JSONExcel/blob/main/examples/README.md) for the complete example guide.
 
 ## CLI
 
@@ -277,7 +277,7 @@ Run `jsonexcel --help` for the complete command reference.
 - Source restoration returns the embedded snapshot and intentionally ignores later worksheet edits; ordinary `from_excel()` reads visible tabular values.
 - Multiple JSON columns are supported; relational expansion is designed primarily for Python/JSON records.
 
-See [SECURITY.md](SECURITY.md), [docs/security.md](docs/security.md), and [docs/troubleshooting.md](docs/troubleshooting.md).
+See [SECURITY.md](https://github.com/vikramlingam/JSONExcel/blob/main/SECURITY.md), [docs/security.md](https://github.com/vikramlingam/JSONExcel/blob/main/docs/security.md), and [docs/troubleshooting.md](https://github.com/vikramlingam/JSONExcel/blob/main/docs/troubleshooting.md).
 
 ## Development
 
@@ -291,8 +291,8 @@ python -m pip install -e '.[docs]'
 mkdocs build --strict
 ```
 
-CI checks Python 3.10 through 3.12. Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
+CI checks Python 3.10 through 3.12. Contributions are welcome; see [CONTRIBUTING.md](https://github.com/vikramlingam/JSONExcel/blob/main/CONTRIBUTING.md).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](https://github.com/vikramlingam/JSONExcel/blob/main/LICENSE).

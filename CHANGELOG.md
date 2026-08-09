@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Corrected README and documentation links for reliable rendering on PyPI.
+- Added package metadata links for the project homepage, repository, issues, changelog, and documentation.
+- No API or functional changes.
+
 ## 0.1.0
 
 - Added flat and relational JSON conversion.
