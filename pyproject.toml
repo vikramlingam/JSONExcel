@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsonexcel"
+version = "0.1.0"
+description = "Convert JSON, JSONL, and Excel JSON columns into clean XLSX workbooks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "jsonexcel contributors"}]
+dependencies = ["XlsxWriter>=3.1", "openpyxl>=3.1"]
+keywords = ["json", "jsonl", "excel", "xlsx", "conversion"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Spreadsheet",
+]
+
+[project.optional-dependencies]
+pandas = ["pandas>=2.0"]
+polars = ["polars>=0.20"]
+dev = ["ruff>=0.5", "build>=1", "mypy>=1.11", "twine>=5"]
+docs = ["mkdocs>=1.6", "mkdocs-material>=9.5"]
+
+[project.scripts]
+jsonexcel = "jsonexcel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+mypy_path = "src"
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true

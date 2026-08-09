@@ -1,0 +1,20 @@
+site_name: jsonexcel
+site_description: Convert JSON and Python records into clean Excel workbooks.
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Getting started: quickstart.md
+  - Conversion: conversion.md
+  - Nested and relational JSON: nested-json.md
+  - JSONL and large files: large-files.md
+  - Excel JSON columns: excel-json-column.md
+  - Analytics: analytics.md
+  - Comparison: comparisons.md
+  - Dashboards: dashboards.md
+  - Data quality: profiling.md
+  - CLI: cli.md
+  - API reference: api.md
+  - Recipes: recipes.md
+  - Security: security.md
+  - Troubleshooting: troubleshooting.md

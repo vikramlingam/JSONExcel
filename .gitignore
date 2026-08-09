@@ -1,0 +1,44 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Packaging and documentation output
+build/
+dist/
+*.egg-info/
+.eggs/
+site/
+
+# Example and benchmark output
+example-output/
+
+# Local verification and planning files excluded from the initial repository
+/tests/
+/benchmarks/
+/roadmap.md
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
