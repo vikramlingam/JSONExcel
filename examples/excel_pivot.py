@@ -2,7 +2,6 @@
 
 from jsonexcel import from_excel, pivot
 
-
 pivot(
     from_excel("examples/data/sales.xlsx"),
     "sales_pivot.xlsx",

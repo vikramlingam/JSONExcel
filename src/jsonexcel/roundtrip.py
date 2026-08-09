@@ -1,8 +1,8 @@
 """Tabular workbook reading and explicit embedded-source restoration."""
 
-from typing import Any
 import hashlib
 import json
+from typing import Any
 
 from openpyxl import load_workbook
 

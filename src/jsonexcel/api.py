@@ -1,17 +1,17 @@
 """Public conversion functions."""
 
+import json
 from collections.abc import Callable, Mapping
 from pathlib import Path
 from typing import Any
-import json
 
 from ._naming import allocate_logical_name
-from .normalize import flatten, load_records
-from .relational import build_tables, has_nested_object_array, relationship_metadata
-from .writer import write_workbook
 from .excel_reader import read_json_column, read_json_columns
 from .exceptions import ConfigurationError
+from .normalize import flatten, load_records
+from .relational import build_tables, has_nested_object_array, relationship_metadata
 from .roundtrip import metadata
+from .writer import write_workbook
 
 
 def convert(data: Any, output: Any = None, *, mode: str = "auto", separator: str = ".", style: str = "clean", infer_types: bool = True, freeze_headers: bool = True, auto_width: bool = True, autofilter: bool = True, allow_formulas: bool = False, hyperlinks: bool = False, column_types: dict[str, str] | None = None, progress: Callable[[float], None] | None = None, summary: bool = False, split_by: str | None = None, max_sheets: int = 100, preserve_source: bool = False, sheet: str | None = None, records: str | None = None, columns: list[str] | None = None, exclude: list[str] | None = None, rename: Mapping[str, str] | None = None, sort_by: str | None = None, descending: bool = False, filter: Callable[[dict[str, Any]], bool] | None = None, chunk_size: int | None = None, title: str | None = None, author: str | None = None, subject: str | None = None, json_column: str | None = None, json_columns: list[str] | None = None, arrays: str = "json", include_source_row: bool = False, include_columns: list[str] | None = None, header_order: str = "first-seen", preferred_columns: list[str] | None = None, errors: str = "report", clean_json: bool = False, long_text: str = "error") -> bytes | None:

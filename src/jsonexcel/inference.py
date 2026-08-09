@@ -1,8 +1,8 @@
 """Conservative values and Excel formats."""
 
+import re
 from datetime import date, datetime
 from typing import Any
-import re
 
 from .exceptions import ConfigurationError, ConversionError
 

@@ -2,7 +2,6 @@
 
 from jsonexcel import dashboard, from_excel
 
-
 dashboard(
     from_excel("examples/data/sales.xlsx"),
     "sales_dashboard.xlsx",

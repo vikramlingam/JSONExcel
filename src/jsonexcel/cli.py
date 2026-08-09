@@ -1,8 +1,8 @@
 """Command-line interface."""
 
 import argparse
-from pathlib import Path
 import sys
+from pathlib import Path
 
 from .api import convert
 from .compare import compare

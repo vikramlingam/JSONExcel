@@ -2,7 +2,6 @@
 
 from jsonexcel import from_excel, summarize
 
-
 summarize(
     from_excel("examples/data/sales.xlsx"),
     "sales_summary.xlsx",

@@ -1,9 +1,9 @@
 """Read JSON values stored in Excel cells into the normal record pipeline."""
 
-from collections.abc import Mapping
-from typing import Any
 import json
 import re
+from collections.abc import Mapping
+from typing import Any
 
 from openpyxl import load_workbook
 

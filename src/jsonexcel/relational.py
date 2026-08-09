@@ -1,8 +1,8 @@
 """Deterministic relational expansion for nested arrays of objects."""
 
+import re
 from collections import Counter
 from collections.abc import Mapping
-import re
 from typing import Any
 
 from ._naming import allocate_logical_name

@@ -2,8 +2,8 @@
 
 from typing import Any
 
-from .normalize import load_records
 from .exceptions import ConfigurationError
+from .normalize import load_records
 from .relational import has_nested_object_array, relational_plan
 
 
@@ -25,5 +25,5 @@ def validate(data: Any, *, mode: str = "auto", records: str | None = None) -> di
         if not plan["records"]:
             warnings.append("The input contains no records; the workbook will contain headers only.")
         return {"valid": True, "warnings": warnings, "records": plan["records"], "detected_tables": len(plan["tables"]), "plan": plan}
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 - validation reports failures instead of raising them
         return {"valid": False, "warnings": [str(exc)], "records": 0, "detected_tables": 0}

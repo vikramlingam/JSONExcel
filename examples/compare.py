@@ -2,7 +2,6 @@
 
 from jsonexcel import compare
 
-
 compare(
     [{"id": 1, "status": "pending"}],
     [{"id": 1, "status": "complete"}],

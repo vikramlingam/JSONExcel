@@ -2,7 +2,6 @@
 
 from jsonexcel import pivot
 
-
 pivot(
     [{"region": "North", "product": "A", "sales": 100}],
     "pivot.xlsx",

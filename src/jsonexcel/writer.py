@@ -1,12 +1,12 @@
 """Workbook writing and restrained default styles."""
 
+import hashlib
+import json
+import logging
+import re
 from io import BytesIO
 from pathlib import Path
 from typing import Any
-import hashlib
-import re
-import json
-import logging
 
 import xlsxwriter
 
@@ -98,7 +98,7 @@ def write_safe_cell(worksheet: Any, row: int, column: int, value: Any, cell_form
 
 
 def _write_value(worksheet: Any, row: int, column: int, value: Any, cell_format: Any, hyperlinks: bool) -> None:
-    if hyperlinks and isinstance(value, str) and (value.startswith("http://") or value.startswith("https://") or ("@" in value and " " not in value and not value.startswith(("=", "+", "-", "@")))):
+    if hyperlinks and isinstance(value, str) and (value.startswith(("http://", "https://")) or ("@" in value and " " not in value and not value.startswith(("=", "+", "-", "@")))):
         target = value if "://" in value else f"mailto:{value}"
         worksheet.write_url(row, column, target, cell_format, value)
     else:

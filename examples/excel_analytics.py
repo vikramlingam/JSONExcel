@@ -2,7 +2,6 @@
 
 from jsonexcel import analyze, from_excel
 
-
 analyze(
     from_excel("examples/data/sales.xlsx"),
     "sales_analysis.xlsx",

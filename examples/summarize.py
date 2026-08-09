@@ -2,7 +2,6 @@
 
 from jsonexcel import summarize
 
-
 summarize(
     [{"region": "North", "sales": 100}, {"region": "North", "sales": 75}],
     "summary.xlsx",

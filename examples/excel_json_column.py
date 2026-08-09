@@ -2,7 +2,6 @@
 
 from jsonexcel import convert
 
-
 convert(
     "examples/data/customer_json_blobs.xlsx",
     "customer_records.xlsx",
